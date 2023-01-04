@@ -89,6 +89,7 @@ View::View(Plasma::Corona *corona, QScreen *targetScreen, bool byPassX11WM)
     const auto flags = Qt::FramelessWindowHint
             | Qt::NoDropShadowWindowHint
             | Qt::WindowDoesNotAcceptFocus;
+            | Qt::BypassWindowManagerHint
 
     if (byPassX11WM) {
         setFlags(flags | Qt::BypassWindowManagerHint);
